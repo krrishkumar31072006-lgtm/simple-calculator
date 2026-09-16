@@ -10,7 +10,8 @@ function appendValue(value) {
 
         firstNumber = display.value;
         operator = value;
-        display.value = "";
+
+        display.value = firstNumber + operator;
 
     } else {
 
@@ -21,23 +22,23 @@ function appendValue(value) {
 
 function calculate() {
 
-    secondNumber = display.value;
+    secondNumber = display.value.slice(firstNumber.length + 1);
 
-    let c = Number(firstNumber);
+    let a = Number(firstNumber);
     let b = Number(secondNumber);
     let result;
 
     if (operator == "+") {
-        result = c + b;
+        result = a + b;
     }
     else if (operator == "-") {
-        result = c - b;
+        result = a - b;
     }
     else if (operator == "*") {
-        result = c * b;
+        result = a * b;
     }
     else if (operator == "/") {
-        result = c / b;
+        result = a / b;
     }
 
     display.value = result;
