@@ -23,21 +23,21 @@ function calculate() {
 
     secondNumber = display.value;
 
-    let a = Number(firstNumber);
+    let c = Number(firstNumber);
     let b = Number(secondNumber);
     let result;
 
     if (operator == "+") {
-        result = a + b;
+        result = c + b;
     }
     else if (operator == "-") {
-        result = a - b;
+        result = c - b;
     }
     else if (operator == "*") {
-        result = a * b;
+        result = c * b;
     }
     else if (operator == "/") {
-        result = a / b;
+        result = c / b;
     }
 
     display.value = result;
